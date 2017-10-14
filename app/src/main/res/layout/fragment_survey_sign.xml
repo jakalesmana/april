@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_rounded_white"
+        android:elevation="3dp"
+        android:layout_margin="3dp">
+        <ImageView
+            android:id="@+id/imgSignature"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_signature"/>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/survey_disclaimer"/>
+
+            <Button
+                android:id="@+id/btnSignature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/action_signature"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_rounded_primary_clickable"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
