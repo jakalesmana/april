@@ -1,27 +1,29 @@
 package com.trusindo.april.ui.activity;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
+import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.trusindo.april.R;
 import com.trusindo.april.manager.LocationSurveyManager;
 import com.trusindo.april.ui.composite.SurveyPagerAdapter;
-import com.trusindo.april.ui.tab.TabBarView;
 import com.trusindo.april.utils.AppUtils;
 
 import java.util.ArrayList;
-
-import devlight.io.library.ntb.NavigationTabBar;
-
 /**
  * Created by jakalesmana on 10/10/17.
  */
@@ -60,48 +62,72 @@ public class SurveyPageActivity extends BaseActivity {
             public void onPageScrollStateChanged(int state) {}
         });
 
-        setupTabBar();
+//        setupTabBar();
+        setupMaterialTabBar();
     }
 
-    private void setupTabBar() {
-        final String[] colors = getResources().getStringArray(R.array.tab_colors);
-        int[] tab_icons = {R.mipmap.ic_assignment,
-                R.mipmap.ic_image_object,
-                R.mipmap.ic_image_env,
-                R.mipmap.ic_location_pick,
-                R.mipmap.ic_sign_tab};
+    private void setupMaterialTabBar() {
+        final int[] tab_icons = {
+                R.mipmap.ic_assignment,
+                R.mipmap.ic_terrain,
+                R.mipmap.ic_building,
+                R.mipmap.ic_location_env,
+                R.mipmap.ic_photo,
+                R.mipmap.ic_location_on,
+                R.mipmap.ic_sign};
 
-        final String[] titles = {
-                getString(R.string.survey_object_data),
-                getString(R.string.survey_object_pic),
-                getString(R.string.survey_object_pic),
-                getString(R.string.survey_object_loc),
-                getString(R.string.survey_object_sign)
-        };
+        SmartTabLayout tab = (SmartTabLayout) findViewById(R.id.vpTabLayout);
 
-        final NavigationTabBar navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb_horizontal);
-        final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+        final LayoutInflater inflater = LayoutInflater.from(tab.getContext());
+        tab.setCustomTabView(new SmartTabLayout.TabProvider() {
+            @Override
+            public View createTabView(ViewGroup container, int position, PagerAdapter adapter) {
+                ImageView icon = (ImageView) inflater.inflate(R.layout.custom_tab_icon, container, false);
+                icon.setImageDrawable(ContextCompat.getDrawable(SurveyPageActivity.this, tab_icons[position]));
+                return icon;
+            }
+        });
 
-        for (int i = 0; i < 5; i++) {
-            models.add(
-                    new NavigationTabBar.Model.Builder(
-                            getSupportDrawable(tab_icons[i]),
-                            Color.parseColor(colors[i]))
-                            .title(titles[i])
-                            .build()
-            );
-        }
-
-        navigationTabBar.setModels(models);
-        navigationTabBar.setViewPager(mViewPager, 0);
-
-//        navigationTabBar.post(new Runnable() {
-//            public void run() {
-//                ((ViewGroup.MarginLayoutParams) mViewPager.getLayoutParams()).topMargin = (int) -navigationTabBar.getBadgeMargin();
-//                mViewPager.requestLayout();
-//            }
-//        });
+        tab.setViewPager(mViewPager);
     }
+
+//    private void setupTabBar() {
+//        final String[] colors = getResources().getStringArray(R.array.tab_colors);
+//        int[] tab_icons = {
+//                R.mipmap.ic_assignment,
+//                R.mipmap.ic_assignment,
+//                R.mipmap.ic_assignment,
+//                R.mipmap.ic_assignment,
+//                R.mipmap.ic_image_object,
+//                R.mipmap.ic_location_pick,
+//                R.mipmap.ic_sign_tab};
+//
+//        final String[] titles = {
+//                getString(R.string.survey_object_data),
+//                getString(R.string.survey_object_ground),
+//                getString(R.string.survey_object_building),
+//                getString(R.string.survey_object_environmrnt),
+//                getString(R.string.survey_object_pic),
+//                getString(R.string.survey_object_loc),
+//                getString(R.string.survey_object_sign)
+//        };
+//
+//        final NavigationTabBar navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb_horizontal);
+//        final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+//
+//        for (int i = 0; i < 5; i++) {
+//            models.add(
+//                    new NavigationTabBar.Model.Builder(
+//                            getSupportDrawable(tab_icons[i]),
+//                            Color.parseColor(colors[i]))
+//                            .title(titles[i])
+//                            .build()
+//            );
+//        }
+//
+//        navigationTabBar.setModels(models);
+//        navigationTabBar.setViewPager(mViewPager, 0);
+//    }
 
     private Drawable getSupportDrawable(int id) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {

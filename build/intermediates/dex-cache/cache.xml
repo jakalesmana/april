@@ -7,8 +7,17 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="7b8fcb53933888b07e01eb078765184973f6b096">
+        sha1="ef62eb94c0a2209ac2ea6fc849b022c45b785a5f">
         <dex dex="/Users/mainspring/Documents/Project/Private/Banasco/april/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0046688a87b97f9b755aab2f4f5ce20381eeb0d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/mainspring/.android/build-cache/90bb691b48288436b5d737eab8bfdb7d2f58ce89/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="1d16ffcc50b1dfa726cf978ea9f0a949cdd70e7d">
+        <dex dex="/Users/mainspring/Documents/Project/Private/Banasco/april/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5b3097140bc58b705c52e62d786777725324bf31/classes.dex" />
     </item>
     <item
         is-multidex="true"

@@ -16,17 +16,18 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|enterAlways">
 
-            <devlight.io.library.ntb.NavigationTabBar
-                android:id="@+id/ntb_horizontal"
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/vpTabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
-                app:ntb_badged="false"
-                app:ntb_bg_color="@color/colorPrimary"
-                app:ntb_scaled="false"
-                app:ntb_title_mode="active"
-                app:ntb_title_size="11sp"
-                app:ntb_titled="true"
-                app:ntb_typeface="fonts/agency.ttf" />
+                android:layout_height="48dp"
+                android:background="@color/colorPrimary"
+                app:stl_distributeEvenly="true"
+                app:stl_dividerColor="@color/transparent"
+                app:stl_dividerThickness="0dp"
+                app:stl_indicatorColor="@color/transparent"
+                app:stl_indicatorThickness="0dp"
+                app:stl_underlineColor="@color/transparent"
+                app:stl_underlineThickness="0dp" />
 
         </FrameLayout>
 

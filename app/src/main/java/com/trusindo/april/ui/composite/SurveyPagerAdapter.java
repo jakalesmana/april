@@ -6,12 +6,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.trusindo.april.R;
+import com.trusindo.april.ui.fragment.SurveyBuildingDataFragment;
+import com.trusindo.april.ui.fragment.SurveyEnvironmentDataFragment;
+import com.trusindo.april.ui.fragment.SurveyGroundDataFragment;
 import com.trusindo.april.ui.fragment.SurveyLocFragment;
 import com.trusindo.april.ui.fragment.SurveyObjectDataFragment;
-import com.trusindo.april.ui.fragment.SurveyPicEnvironmentFragment;
+import com.trusindo.april.ui.fragment.SurveyPicComparationFragment;
 import com.trusindo.april.ui.fragment.SurveyPicObjectFragment;
 import com.trusindo.april.ui.fragment.SurveySignFragment;
-import com.trusindo.april.ui.tab.TabBarView;
 
 /**
  * Created by jakalesmana on 10/10/17.
@@ -20,12 +22,6 @@ import com.trusindo.april.ui.tab.TabBarView;
 public class SurveyPagerAdapter extends FragmentStatePagerAdapter {
 
     private Context context;
-
-//    private int[] tab_icons = {R.mipmap.ic_launcher_round,
-//            android.R.mipmap.sym_def_app_icon,
-//            android.R.drawable.btn_plus,
-//            android.R.drawable.btn_star_big_on,
-//            android.R.drawable.btn_plus};
 
     public SurveyPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
@@ -38,12 +34,16 @@ public class SurveyPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new SurveyObjectDataFragment();
             case 1:
-                return new SurveyPicObjectFragment();
+                return new SurveyGroundDataFragment();
             case 2:
-                return new SurveyPicEnvironmentFragment();
+                return new SurveyBuildingDataFragment();
             case 3:
-                return new SurveyLocFragment();
+                return new SurveyEnvironmentDataFragment();
             case 4:
+                return new SurveyPicObjectFragment();
+            case 5:
+                return new SurveyLocFragment();
+            case 6:
                 return new SurveySignFragment();
             default:
                 return null;
@@ -51,30 +51,7 @@ public class SurveyPagerAdapter extends FragmentStatePagerAdapter {
     }
 
     @Override
-    public CharSequence getPageTitle(int position) {
-        switch (position) {
-            case 0:
-                return context.getString(R.string.survey_object_data);
-            case 1:
-                return context.getString(R.string.pic_object);
-            case 2:
-                return context.getString(R.string.pic_environment);
-            case 3:
-                return context.getString(R.string.survey_object_loc);
-            case 4:
-                return context.getString(R.string.survey_object_sign);
-            default:
-                return "";
-        }
-    }
-
-    @Override
     public int getCount() {
-        return 5;
+        return 7;
     }
-
-//    @Override
-//    public int getIconResId(int position) {
-//        return tab_icons[position];
-//    }
 }

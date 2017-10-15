@@ -24,16 +24,19 @@
     <string name="title_activity_splash">SplashActivity</string>
 
     <string name="survey_object_data">Data</string>
+    <string name="survey_object_ground">Tanah</string>
+    <string name="survey_object_building">Bangunan</string>
+    <string name="survey_object_environmrnt">Lingkungan</string>
     <string name="survey_object_pic">Foto</string>
     <string name="survey_object_loc">Lokasi</string>
     <string name="survey_object_sign">Persetujuan</string>
 
-    <string name="survey_location">Lokasi Objek Jaminan</string>
-    <string name="survey_address">Alamat objek:</string>
+    <string name="survey_location">Lokasi Obyek Jaminan</string>
+    <string name="survey_address">Alamat Obyek:</string>
     <string name="survey_address_kelurahan">Kelurahan:</string>
     <string name="survey_address_kecamatan">Kecamatan:</string>
     <string name="survey_address_postal_code">Kode Pos:</string>
-    <string name="survey_address_postal_city">Kota:</string>
+    <string name="survey_address_postal_city">Kota/Kabupaten:</string>
     <string name="survey_address_province">Provinsi:</string>
     <string name="survey_set_location">Ubah Lokasi</string>
 
@@ -49,7 +52,111 @@
     <string name="delete_pic">Hapus foto</string>
     <string name="delete_pic_confirmation">Anda yakin ingin menghapus foto ini?</string>
 
-    <string name="pic_object">Foto Objek Jaminan</string>
-    <string name="pic_environment">Foto Lingkungan Sekitar Objek</string>
+    <string name="pic_object">Foto Obyek Jaminan</string>
+    <string name="pic_comparator">Foto Obyek Pembanding</string>
     <string name="click_to_describe">Klik gambar untuk menambahkan deskripsi foto.</string>
+
+    <string name="survey_data">Data Jaminan</string>
+
+    <string name="survey_field_kind">Jenis aset/jaminan:</string>
+    <string name="survey_field_certificate">Sertipikat:</string>
+    <string name="survey_field_certificate_no">Nomor Sertipikat:</string>
+    <string name="survey_field_certificate_exp">Jatuh Tempo Sertipikat:</string>
+    <string name="survey_field_certificate_name">Nama Pemilik Sertipikat:</string>
+    <string name="survey_field_ground_size">Luas Tanah (m2):</string>
+    <string name="survey_field_relation">Hubungan Dengan Debitur:</string>
+    <string name="survey_field_notes">Keterangan Obyek Jaminan:</string>
+
+    <string name="survey_ground_data">Data Tanah</string>
+
+    <string name="survey_section_ground_line">Batas Tanah</string>
+    <string name="survey_field_ground_front">Sisi Depan:</string>
+    <string name="survey_field_ground_behind">Sisi Belakang:</string>
+    <string name="survey_field_ground_left">Sisi Kiri:</string>
+    <string name="survey_field_ground_kanan">Sisi Kanan:</string>
+    <string name="survey_field_ground_elevation">Elevasi Terhadap Jalan di Depan:</string>
+
+    <string name="survey_section_ground_condition">Kondisi Tanah</string>
+    <string name="survey_field_ground_contur">Kontur Tanah:</string>
+    <string name="survey_field_ground_kind">Jenis Tanah:</string>
+    <string name="survey_field_ground_position">Posisi Tanah:</string>
+    <string name="survey_field_ground_orientation">Orientasi Tanah:</string>
+    <string name="survey_field_ground_shape">Bentuk Tanah:</string>
+
+    <string name="survey_section_ground_state">Status Tanah</string>
+    <string name="survey_field_ground_state">Status Obyek Tanah:</string>
+    <string name="survey_field_ground_renter_name">Nama Penyewa:</string>
+    <string name="survey_field_ground_rent_duration">Lama Sewa (bulan):</string>
+
+    <string name="survey_building_data">Data Bangunan</string>
+
+    <string name="survey_section_building_spec">Spesifikasi Bangunan</string>
+    <string name="survey_field_building_kind">Jenis Bangunan:</string>
+    <string name="survey_field_building_size_imb">Luas Bangunan Sesuai IMB (m2):</string>
+    <string name="survey_field_building_size_actual">Luas Bangunan Fisik (m2):</string>
+    <string name="survey_field_building_built_year">Tahun Pembangunan:</string>
+    <string name="survey_field_building_renov_year">Tahun Renovasi:</string>
+    <string name="survey_field_building_imb_no">Nomor IMB:</string>
+    <string name="survey_field_building_floor_no">Jumlah Lantai:</string>
+    <string name="survey_field_building_structure">Struktur Bangunan:</string>
+    <string name="survey_field_building_floor_kind">Jenis Lantai:</string>
+    <string name="survey_field_building_wall_kind">Jenis Dinding:</string>
+    <string name="survey_field_building_plafon_kind">Jenis Plafon:</string>
+    <string name="survey_field_building_roof_level">Atap:</string>
+    <string name="survey_field_building_window_door_kind">Jenis Pintu dan Jendela:</string>
+    <string name="survey_field_building_stair_kind">Jenis Tangga:</string>
+    <string name="survey_field_building_class">Kelas Bangunan:</string>
+
+    <string name="survey_section_building_facility">Fasilitas Bangunan</string>
+    <string name="survey_field_building_electricity">Sambungan Listrik:</string>
+    <string name="survey_field_building_electricity_capacity">Kapasitas Listrik (KWH):</string>
+    <string name="survey_field_building_water">Air Bersih:</string>
+    <string name="survey_field_building_phone_line">Sambungan Telepon:</string>
+    <string name="survey_field_building_phone_line_no">Jumlah Line Telepon:</string>
+    <string name="survey_field_building_car_park">Car Park:</string>
+    <string name="survey_field_building_car_park_capacity">Kapasitas Car Park (mobil):</string>
+    <string name="survey_field_building_gate">Pagar:</string>
+    <string name="survey_field_building_fire_rescue">Pemadam Kebakaran:</string>
+
+    <string name="survey_environment_data">Data Lingkungan</string>
+
+    <string name="survey_section_environment">Informasi Umum</string>
+    <string name="survey_field_area">Wilayah:</string>
+    <string name="survey_field_for">Peruntukan:</string>
+    <string name="survey_field_for_existing">Penggunaan Existing:</string>
+    <string name="survey_field_decoration">Penataan Ruangan Lingkungan:</string>
+
+    <string name="survey_section_environment_facility">Fasilitas Lingkungan</string>
+    <string name="survey_field_electricity">Jaringan Listrik:</string>
+    <string name="survey_field_phone">Jaringan Telepon:</string>
+    <string name="survey_field_water">Jaringan Air Bersih:</string>
+    <string name="survey_field_lighting">Penerangan Jalan:</string>
+
+    <string name="survey_section_environment_analysis">Analisa Lokasi</string>
+    <string name="survey_field_access_level">Kemudahan Akses Transportasi:</string>
+    <string name="survey_field_shopping_center">Pusat Perbelanjaan:</string>
+    <string name="survey_field_education_center">Sarana Pendidikan:</string>
+    <string name="survey_field_health_center">Rumah Sakit/Klinik:</string>
+    <string name="survey_field_pray_center">Tempat Ibadah:</string>
+
+    <string name="survey_section_environment_road_front">Jalan di Depan Agunan</string>
+    <string name="survey_field_road_front">Jalan di Depan:</string>
+    <string name="survey_field_road_construction">Konstruksi Jalan:</string>
+    <string name="survey_field_road_width">Lebar Badan Jalan (m):</string>
+    <string name="survey_field_road_condition">Kondisi Jalan:</string>
+    <string name="survey_field_road_drainase">Drainase Jalan:</string>
+
+    <string name="survey_section_environment_risk_potency">Potensi Risiko</string>
+    <string name="survey_field_risk_fire">Risiko Kebakaran:</string>
+    <string name="survey_field_risk_fallground">Risiko Longsor:</string>
+    <string name="survey_field_risk_flood">Risiko Banjir:</string>
+    <string name="survey_field_risk_das_distance">Jarak Dengan DAS:</string>
+    <string name="survey_field_risk_grave_distance">Jarak Dengan Makam:</string>
+    <string name="survey_field_risk_high_electricity">Jalur Tegangan Tinggi:</string>
+    <string name="survey_field_risk_tower">Tower:</string>
+    <string name="survey_field_risk_road_widthen_plan">Rencana Pelebaran Jalan:</string>
+    <string name="survey_field_risk_trash_area">Tempat Pembuangan Sampah Umum:</string>
+
+    <string name="survey_notes">Keterangan Lainnya:</string>
+
 </resources>
