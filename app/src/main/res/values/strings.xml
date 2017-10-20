@@ -44,6 +44,7 @@
 
     <string name="action_signature">TANDA TANGAN</string>
     <string name="action_add_pic">TAMBAH FOTO</string>
+    <string name="action_next">SELANJUTNYA</string>
     <string name="delete">Hapus</string>
     <string name="save">Selesai</string>
     <string name="desc">Deskripsi</string>
