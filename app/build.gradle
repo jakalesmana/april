@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.trusindo.april"
         minSdkVersion 16
@@ -40,7 +40,7 @@ dependencies {
     compile 'com.yarolegovich:lovely-dialog:1.0.7'
     compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
     compile 'se.emilsjolander:StickyScrollViewItems:1.1.0'
-    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:multidex:1.0.2'
 
     compile ('io.nlopez.smartlocation:library:3.3.1') {
         transitive = false

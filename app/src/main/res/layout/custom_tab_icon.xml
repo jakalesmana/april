@@ -6,5 +6,5 @@
     android:layout_height="match_parent"
     android:background="?attr/selectableItemBackground"
     android:scaleType="center"
-    app:tint="@color/custom_tab_icon" />
+    app:tintres="@color/custom_tab_icon" />
 
