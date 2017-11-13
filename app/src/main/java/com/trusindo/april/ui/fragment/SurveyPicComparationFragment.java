@@ -18,9 +18,11 @@ import com.trusindo.april.R;
 import com.trusindo.april.model.SurveyPicture;
 import com.trusindo.april.ui.composite.SurveyPicAdapter;
 import com.trusindo.april.utils.AppUtils;
+import com.trusindo.april.utils.MyGlideEngine;
 import com.yarolegovich.lovelydialog.LovelyTextInputDialog;
 import com.zhihu.matisse.Matisse;
 import com.zhihu.matisse.MimeType;
+import com.zhihu.matisse.engine.impl.GlideEngine;
 import com.zhihu.matisse.engine.impl.PicassoEngine;
 import com.zhihu.matisse.internal.entity.CaptureStrategy;
 
@@ -76,7 +78,7 @@ public class SurveyPicComparationFragment extends BaseFragment implements View.O
                 .captureStrategy(new CaptureStrategy(true, "com.trusindo.april.fileprovider"))
                 .maxSelectable(10)
                 .restrictOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED)
-                .imageEngine(new PicassoEngine())
+                .imageEngine(new MyGlideEngine())
                 .forResult(IMAGE_PICKER_REQ_CODE);
     }
 

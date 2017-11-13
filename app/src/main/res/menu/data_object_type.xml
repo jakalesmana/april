@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/rumahtinggal" android:title="Rumah Tinggal" />
+    <item android:title="Tanah Kosong" />
+    <item android:title="Jalan Lingkungan" />
+    <item android:title="Ruko" />
+    <item android:title="Saluran Air" />
+    <item android:title="Tanah Sawah" />
+    <item android:title="Lainnya" />
+</menu>

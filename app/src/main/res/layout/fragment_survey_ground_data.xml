@@ -52,15 +52,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_ground_front"
-                    android:inputType="text"
+                    android:inputType="none"
                     android:maxLines="1"
-                    android:textSize="13sp"/>
+                    android:textSize="13sp"
+                    android:focusableInTouchMode="false"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
                 <EditText
                     android:id="@+id/txtLineBehind"
                     android:layout_width="match_parent"

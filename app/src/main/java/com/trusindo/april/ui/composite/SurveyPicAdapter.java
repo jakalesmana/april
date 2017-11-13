@@ -11,10 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
+import com.bumptech.glide.Glide;
 import com.trusindo.april.R;
 import com.trusindo.april.model.SurveyPicture;
-import com.yarolegovich.lovelydialog.LovelyInfoDialog;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -77,7 +76,8 @@ public class SurveyPicAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
 
-        Picasso.with(context).load(mListPicture.get(pos).getImageUri()).fit().into(holder.imgSurvey);
+//        Picasso.with(context).load(mListPicture.get(pos).getImageUri()).centerCrop().into(holder.imgSurvey);
+        Glide.with(context).load(mListPicture.get(pos).getImageUri()).into(holder.imgSurvey);
 
         if (mListPicture.get(pos).getImageDescription().equals("")) {
             holder.layoutDescription.setVisibility(View.GONE);

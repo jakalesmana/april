@@ -42,7 +42,7 @@ public class SurveyPageActivity extends BaseActivity {
             getSupportActionBar().hide();
         }
 
-        mViewPager = (ViewPager) findViewById(R.id.viewPagerSurvey);
+        mViewPager = findViewById(R.id.viewPagerSurvey);
 
         SurveyPagerAdapter vpAdapter = new SurveyPagerAdapter(getSupportFragmentManager(), this);
         mViewPager.setAdapter(vpAdapter);
@@ -76,7 +76,7 @@ public class SurveyPageActivity extends BaseActivity {
                 R.mipmap.ic_location_on,
                 R.mipmap.ic_sign};
 
-        SmartTabLayout tab = (SmartTabLayout) findViewById(R.id.vpTabLayout);
+        SmartTabLayout tab = findViewById(R.id.vpTabLayout);
 
         final LayoutInflater inflater = LayoutInflater.from(tab.getContext());
         tab.setCustomTabView(new SmartTabLayout.TabProvider() {

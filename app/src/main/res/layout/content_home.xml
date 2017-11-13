@@ -13,12 +13,10 @@
         android:id="@+id/txtTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:text="asfsfsdfdsfsdf"/>
+        android:layout_marginBottom="10dp" />
     <TextView
         android:id="@+id/txtTest2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="zdfsdfsdfsdfsdfsdf"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
