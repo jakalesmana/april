@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="Lebih tinggi" />
-    <item android:title="Lebih rendah" />
-    <item android:title="Sama dengan jalan" />
-</menu>

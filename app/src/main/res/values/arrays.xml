@@ -1,0 +1,318 @@
+<resources>
+    <string-array name="arr_data_object_type">
+        <item>Rumah Tinggal</item>
+        <item>Tanah Kosong</item>
+        <item>Jalan Lingkungan</item>
+        <item>Ruko</item>
+        <item>Saluran Air</item>
+        <item>Tanah Sawah</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_elevation_type">
+        <item>Lebih tinggi</item>
+        <item>Lebih rendah</item>
+        <item>Sama dengan jalan</item>
+    </string-array>
+
+    <string-array name="arr_ground_contur">
+        <item>Datar</item>
+        <item>Berbukit</item>
+        <item>Kemiringan landai</item>
+        <item>Kemiringan curam</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_ground_type">
+        <item>Tanah kavling perumahan</item>
+        <item>Tanah matang</item>
+        <item>Tanah mentah</item>
+        <item>Tanah sawah</item>
+        <item>Tanah garapan</item>
+        <item>Tanah darat</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_ground_position">
+        <item>Tengah/badan</item>
+        <item>Hook</item>
+        <item>Tusuk sate</item>
+        <item>Kuldesak</item>
+        <item>Pojok</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_mata_angin">
+        <item>Timur</item>
+        <item>Tenggara</item>
+        <item>Selatan</item>
+        <item>Barat Daya</item>
+        <item>Barat</item>
+        <item>Barat Laut</item>
+        <item>Utara</item>
+        <item>Timur Laut</item>
+    </string-array>
+
+    <string-array name="arr_ground_shape">
+        <item>Persegi</item>
+        <item>Tidak beraturan</item>
+        <item>Menyerupai huruf L</item>
+        <item>Prisma lebar depan</item>
+        <item>Prisma lebar belakang</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_object_status">
+        <item>Ditempati sendiri</item>
+        <item>Kosong</item>
+        <item>Disewakan</item>
+    </string-array>
+
+    <string-array name="arr_area">
+        <item>Kota besar</item>
+        <item>Kota sedang</item>
+        <item>Kota kecil</item>
+        <item>Pedesaan</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_peruntukan_wilayah">
+        <item>Perumahan</item>
+        <item>Pemukiman</item>
+        <item>Komersial</item>
+        <item>Industri</item>
+        <item>Tanah Kosong</item>
+        <item>Persawahan</item>
+        <item>Perkebunan</item>
+        <item>Tambak</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_use_existing">
+        <item>Rumah tinggal</item>
+        <item>Tanah kosong</item>
+        <item>Toko</item>
+        <item>Bangunan kantor</item>
+        <item>Bangunan industri</item>
+    </string-array>
+
+    <string-array name="arr_availability">
+        <item>Ada</item>
+        <item>Tidak ada</item>
+    </string-array>
+
+    <string-array name="arr_availability_ext">
+        <item>Ada</item>
+        <item>Tidak ada</item>
+        <item>Diputus</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_dificulty">
+        <item>Sedang</item>
+        <item>Mudah</item>
+        <item>Sulit</item>
+        <item>Sangat sulit</item>
+    </string-array>
+
+    <string-array name="arr_possibility">
+        <item>Kecil kemungkinan</item>
+        <item>Sedang</item>
+        <item>Besar kemungkinan</item>
+    </string-array>
+
+    <string-array name="arr_building_type">
+        <item>Perkantoran</item>
+        <item>Rumah tinggal</item>
+        <item>Toko</item>
+        <item>Gudang</item>
+        <item>Bangunan industri</item>
+    </string-array>
+
+    <string-array name="arr_building_structure">
+        <item>Beton</item>
+        <item>Baja</item>
+        <item>Kayu</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_floor">
+        <item>Keramik</item>
+        <item>Ubin PC</item>
+        <item>Teraso</item>
+        <item>Marmer</item>
+        <item>Granit</item>
+        <item>Rabat beton</item>
+        <item>Plat beton bertulang</item>
+        <item>Tanah merah dipadatkan</item>
+        <item>Parket</item>
+        <item>Vinyl</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_wall">
+        <item>Bata;Plester;Aci;Cat</item>
+        <item>Pas.Bata</item>
+        <item>Bata;Plester;Aci;Wallpaper</item>
+        <item>Pas.Batako</item>
+        <item>Batako;Plester;Aci;Cat</item>
+        <item>Batako;Plester;Aci;Wallpaper</item>
+        <item>Triplek</item>
+        <item>Kayu</item>
+        <item>Gibsums</item>
+        <item>Seng rangka baja</item>
+        <item>Alucobond</item>
+        <item>Hebel;Plester;Cat</item>
+        <item>Selcon;Plester;Cat</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_plafond">
+        <item>Gibsums</item>
+        <item>Triplek</item>
+        <item>Asbes</item>
+        <item>Akustik</item>
+        <item>Aluminium</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_roof">
+        <item>Genteng keramik</item>
+        <item>Asbes gelombang</item>
+        <item>Dak beton</item>
+        <item>Fibreglass</item>
+        <item>Genteng kodok</item>
+        <item>Genteng metal</item>
+        <item>Genteng beton</item>
+        <item>Genteng plentong</item>
+        <item>Seng gelombang</item>
+        <item>Spandek</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_windowdoor">
+        <item>Aluminium</item>
+        <item>Kayu</item>
+        <item>Besi</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_stair">
+        <item>Beton</item>
+        <item>Kayu</item>
+        <item>Baja</item>
+        <item>Besi</item>
+        <item>Lainnya</item>
+        <item>Tidak ada tangga</item>
+    </string-array>
+
+    <string-array name="arr_building_class">
+        <item>Menengah mewah</item>
+        <item>Menengah</item>
+        <item>Sederhana</item>
+    </string-array>
+
+    <string-array name="arr_bukti_hak">
+        <item>SHM</item>
+        <item>SHMSRS</item>
+        <item>SHGB</item>
+        <item>GIRIK</item>
+        <item>AJB</item>
+    </string-array>
+
+    <string-array name="arr_pemegang_hak">
+        <item>Sendiri</item>
+        <item>Saudara kandung</item>
+        <item>Orang tua</item>
+        <item>Anak kandung</item>
+        <item>Suami</item>
+        <item>Istri</item>
+    </string-array>
+
+    <string-array name="arr_penggarap_debt">
+        <item>Saudara kandung</item>
+        <item>Saudara sepupu</item>
+        <item>Orang tua</item>
+        <item>Sewa-menyewa</item>
+    </string-array>
+
+    <string-array name="arr_tujuan_penilaian">
+        <item>Penilaian baru</item>
+        <item>Re-appraise</item>
+    </string-array>
+
+    <string-array name="arr_jenis_aset">
+        <item>Tanah kosong</item>
+        <item>Tanah dan bangunan</item>
+        <item>Tanah kebun</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_jalan_dpn_objek">
+        <item>Jalan utama</item>
+        <item>Jalan kelas I</item>
+        <item>Jalan perumahan</item>
+        <item>Jalan lingkungan</item>
+        <item>Gang</item>
+        <item>Jalan desa</item>
+    </string-array>
+
+    <string-array name="arr_bahan_jalan">
+        <item>Aspal</item>
+        <item>Beton</item>
+        <item>Paving blok</item>
+        <item>Sirtu</item>
+        <item>Tanah merah</item>
+        <item>Macadam</item>
+        <item>Batu kapur</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_rekomendasi">
+        <item>Direkomendasikan</item>
+        <item>Tidak direkomendasikan</item>
+        <item>Rekomendasi dengan catatan</item>
+    </string-array>
+
+    <string-array name="arr_future_use">
+        <item>Sangat mungkin</item>
+        <item>Kecil kemungkinan</item>
+        <item>Tidak mungkin</item>
+        <item>Sedang berlangsung</item>
+    </string-array>
+
+    <string-array name="arr_quality">
+        <item>Baik</item>
+        <item>Cukup</item>
+        <item>Sedang</item>
+        <item>Kurang</item>
+        <item>Rusak</item>
+    </string-array>
+
+    <string-array name="arr_area_criteria">
+        <item>Belum matang</item>
+        <item>Matang-Nondevelop</item>
+        <item>Matang-Developed</item>
+    </string-array>
+
+    <string-array name="arr_building_pondation">
+        <item>Tiang pancang</item>
+        <item>Batu kali</item>
+        <item>Rolak bata</item>
+        <item>Pondasi setempat</item>
+        <item>Lainnya</item>
+    </string-array>
+
+    <string-array name="arr_building_condition">
+        <item>Baru</item>
+        <item>Baik-terawat</item>
+        <item>Sedang-terawat</item>
+        <item>Sedang-tidak terawat</item>
+        <item>Rusak</item>
+        <item>Tidak dihitung</item>
+    </string-array>
+
+    <string-array name="arr_persentase">
+
+    </string-array>
+</resources>

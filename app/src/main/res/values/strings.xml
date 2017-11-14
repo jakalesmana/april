@@ -159,5 +159,8 @@
     <string name="survey_field_risk_trash_area">Tempat Pembuangan Sampah Umum:</string>
 
     <string name="survey_notes">Keterangan Lainnya:</string>
+    <string name="exit_confirmation">Yakin ingin keluar dari pengisian data?</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
 
 </resources>

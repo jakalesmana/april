@@ -66,7 +66,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_ground_behind"
-                    android:inputType="text"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
@@ -80,7 +81,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_ground_left"
-                    android:inputType="text"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
@@ -94,7 +96,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_ground_kanan"
-                    android:inputType="text"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
@@ -109,7 +112,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_ground_elevation"
-                    android:inputType="text"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
