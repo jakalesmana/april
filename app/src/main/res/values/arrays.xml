@@ -234,6 +234,7 @@
         <item>Saudara sepupu</item>
         <item>Orang tua</item>
         <item>Sewa-menyewa</item>
+        <item>Lainnya</item>
     </string-array>
 
     <string-array name="arr_tujuan_penilaian">
@@ -312,7 +313,28 @@
         <item>Tidak dihitung</item>
     </string-array>
 
-    <string-array name="arr_persentase">
+    <string-array name="arr_building_condition_ext">
+        <item>Baru</item>
+        <item>Cukup terawat</item>
+        <item>Baik</item>
+        <item>Kurang terawat</item>
+        <item>Rusak</item>
+        <item>Sedang renovasi/tahap pembangunan</item>
+    </string-array>
 
+    <string-array name="arr_persentase">
+        <item>95%</item>
+        <item>85%</item>
+        <item>70%</item>
+        <item>40%</item>
+        <item>30%</item>
+        <item>0%</item>
+    </string-array>
+
+    <string-array name="arr_pic_while_survey">
+        <item>Pemilik</item>
+        <item>Keluarga pemilik</item>
+        <item>Yang dikuasakan</item>
+        <item>Lainnya</item>
     </string-array>
 </resources>

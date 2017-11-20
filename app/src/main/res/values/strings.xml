@@ -114,17 +114,18 @@
     <string name="survey_field_building_water">Air Bersih:</string>
     <string name="survey_field_building_phone_line">Sambungan Telepon:</string>
     <string name="survey_field_building_phone_line_no">Jumlah Line Telepon:</string>
-    <string name="survey_field_building_car_park">Car Park:</string>
-    <string name="survey_field_building_car_park_capacity">Kapasitas Car Park (mobil):</string>
+    <string name="survey_field_building_car_park">Tempat Parkir:</string>
+    <string name="survey_field_building_car_park_capacity">Luas Tempat Parkir (m2):</string>
     <string name="survey_field_building_gate">Pagar:</string>
     <string name="survey_field_building_fire_rescue">Pemadam Kebakaran:</string>
+    <string name="survey_field_other_facility">Sarana lainnya:</string>
 
     <string name="survey_environment_data">Data Lingkungan</string>
 
     <string name="survey_section_environment">Informasi Umum</string>
     <string name="survey_field_area">Wilayah:</string>
     <string name="survey_field_for">Peruntukan:</string>
-    <string name="survey_field_for_existing">Penggunaan Existing:</string>
+    <string name="survey_field_for_existing">Penggunaan Lahan Existing:</string>
     <string name="survey_field_decoration">Penataan Ruangan Lingkungan:</string>
 
     <string name="survey_section_environment_facility">Fasilitas Lingkungan</string>
@@ -134,33 +135,44 @@
     <string name="survey_field_lighting">Penerangan Jalan:</string>
 
     <string name="survey_section_environment_analysis">Analisa Lokasi</string>
-    <string name="survey_field_access_level">Kemudahan Akses Transportasi:</string>
+    <string name="survey_field_access_level">Kemudahan Akses &#038; Transportasi:</string>
+    <string name="survey_field_shop_level">Kemudahan Berbelanja:</string>
+    <string name="survey_field_school_level">Kemudahan Ke Sekolah:</string>
+    <string name="survey_field_holiday_level">Kemudahan Rekreasi:</string>
     <string name="survey_field_shopping_center">Pusat Perbelanjaan:</string>
     <string name="survey_field_education_center">Sarana Pendidikan:</string>
     <string name="survey_field_health_center">Rumah Sakit/Klinik:</string>
     <string name="survey_field_pray_center">Tempat Ibadah:</string>
+    <string name="survey_field_safe_facility">Fasilitas Keamanan:</string>
+    <string name="survey_field_transport">Sarana Transportasi:</string>
 
     <string name="survey_section_environment_road_front">Jalan di Depan Agunan</string>
-    <string name="survey_field_road_front">Jalan di Depan:</string>
+    <string name="survey_field_road_front">Jalan di Depan Properti:</string>
     <string name="survey_field_road_construction">Konstruksi Jalan:</string>
-    <string name="survey_field_road_width">Lebar Badan Jalan (m):</string>
+    <string name="survey_field_road_width">Lebar Badan Jalan (meter):</string>
     <string name="survey_field_road_condition">Kondisi Jalan:</string>
     <string name="survey_field_road_drainase">Drainase Jalan:</string>
+    <string name="survey_field_road_maintenance">Pemeliharaan Jalan:</string>
+    <string name="survey_field_road_green">Penghijauan:</string>
+    <string name="survey_field_road_design">Penataan Lingkungan:</string>
 
     <string name="survey_section_environment_risk_potency">Potensi Risiko</string>
     <string name="survey_field_risk_fire">Risiko Kebakaran:</string>
+    <string name="survey_field_risk_disaster">Risiko Bencana Alam:</string>
     <string name="survey_field_risk_fallground">Risiko Longsor:</string>
     <string name="survey_field_risk_flood">Risiko Banjir:</string>
-    <string name="survey_field_risk_das_distance">Jarak Dengan DAS:</string>
-    <string name="survey_field_risk_grave_distance">Jarak Dengan Makam:</string>
-    <string name="survey_field_risk_high_electricity">Jalur Tegangan Tinggi:</string>
+    <string name="survey_field_risk_das_distance">Jarak Dengan DAS (~meter): </string>
+    <string name="survey_field_risk_grave_distance">Jarak Dengan Makam (~meter):</string>
+    <string name="survey_field_risk_high_electricity">Jalur Tegangan Tinggi (~meter):</string>
     <string name="survey_field_risk_tower">Tower:</string>
     <string name="survey_field_risk_road_widthen_plan">Rencana Pelebaran Jalan:</string>
-    <string name="survey_field_risk_trash_area">Tempat Pembuangan Sampah Umum:</string>
+    <string name="survey_field_risk_trash_area">Tempat Pembuangan Sampah Umum (~meter):</string>
 
     <string name="survey_notes">Keterangan Lainnya:</string>
     <string name="exit_confirmation">Yakin ingin keluar dari pengisian data?</string>
     <string name="yes">Ya</string>
     <string name="no">Tidak</string>
+
+    <string name="luas_dan_spek_bangunan">Keterangan Luas dan Spesifikasi Bangunan</string>
 
 </resources>

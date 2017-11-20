@@ -3,6 +3,466 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorAccent">
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/survey_building_data"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <com.emilsjolander.components.StickyScrollViewItems.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="15dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:tag="sticky">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/luas_dan_spek_bangunan"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="0dp"/>
+            </FrameLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtJenisBangunan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_kind"
+                    android:inputType="none"
+                    android:maxLines="1"
+                    android:textSize="13sp"
+                    android:focusableInTouchMode="false"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtLuasBangunanIMB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_size_imb"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtTahunBerdiri"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_built_year"
+                    android:inputType="number"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txtTahunRenovasi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_renov_year"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtJumlahLantai"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_floor_no"
+                    android:inputType="number"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtIMB"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_imb_no"
+                    android:inputType="text"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtLuasBangunanFisik"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_size_actual"
+                    android:inputType="number"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtStruktur"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_structure"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtLantai"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_floor_kind"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtDinding"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_wall_kind"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtPlafon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_plafon_kind"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtAtap"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_roof_level"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtPintuJendela"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_window_door_kind"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtTangga"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_stair_kind"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <EditText
+                    android:id="@+id/txtKelasBangunan"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_class"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <FrameLayout
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:tag="sticky">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/survey_section_building_facility"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="0dp"/>
+            </FrameLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtSambunganListrik"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_electricity"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtKapasitasListrik"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_electricity_capacity"
+                    android:inputType="number"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtAirBersih"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_water"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtTelepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_phone_line"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtLineTelepon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_phone_line_no"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtTempatParkir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_car_park"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtLuasTempatParkir"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_car_park_capacity"
+                    android:inputType="number"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtPagar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_gate"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtPemadam"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_building_fire_rescue"
+                    android:inputType="none"
+                    android:focusableInTouchMode="false"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtSaranaLainnya"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/survey_field_other_facility"
+                    android:inputType="text"
+                    android:focusableInTouchMode="true"
+                    android:maxLines="1"
+                    android:textSize="13sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_rounded_primary_clickable"
+                android:textColor="@color/white"
+                android:text="@string/action_next"/>
+        </LinearLayout>
+    </com.emilsjolander.components.StickyScrollViewItems.StickyScrollView>
 
 </LinearLayout>

@@ -36,9 +36,9 @@ public class SurveyPagerAdapter extends FragmentStatePagerAdapter {
             case 1:
                 return new SurveyGroundDataFragment();
             case 2:
-                return new SurveyBuildingDataFragment();
-            case 3:
                 return new SurveyEnvironmentDataFragment();
+            case 3:
+                return new SurveyBuildingDataFragment();
             case 4:
                 return new SurveyPicObjectFragment();
             case 5:

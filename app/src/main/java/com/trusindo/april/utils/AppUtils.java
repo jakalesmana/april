@@ -9,6 +9,13 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+
+import com.shehabic.droppy.DroppyClickCallbackInterface;
+import com.shehabic.droppy.DroppyMenuItem;
+import com.shehabic.droppy.DroppyMenuPopup;
+import com.shehabic.droppy.animations.DroppyFadeInAnimation;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -82,6 +89,28 @@ public class AppUtils {
             Log.d("permission", "permission granted");
             return true;
         }
+    }
+
+    public static void showMenu(Context context, final EditText txtView, int resArray) {
+        final String[] arrs = context.getResources().getStringArray(resArray);
+
+        DroppyMenuPopup.Builder droppyBuilder = new DroppyMenuPopup.Builder(context, txtView);
+
+        for (int i = 0; i < arrs.length; i++) {
+            droppyBuilder.addMenuItem(new DroppyMenuItem(arrs[i]));
+        }
+
+        droppyBuilder.setOnClick(new DroppyClickCallbackInterface() {
+            @Override
+            public void call(View v, int id) {
+                txtView.setText(arrs[id]);
+            }
+        });
+
+        droppyBuilder.setPopupAnimation(new DroppyFadeInAnimation());
+        droppyBuilder.setXOffset(5);
+        droppyBuilder.setYOffset(5);
+        droppyBuilder.build().show();
     }
 
 }
