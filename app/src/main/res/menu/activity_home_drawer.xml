@@ -3,33 +3,29 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Menu 1" />
+            android:id="@+id/nav_building"
+            android:icon="@drawable/ic_menu_building"
+            android:title="Tanah dan Bangunan" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Menu 2" />
+            android:id="@+id/nav_apartment"
+            android:icon="@drawable/ic_menu_apartment"
+            android:title="Apartemen" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Menu 3" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Menu 4" />
+            android:id="@+id/nav_heavy_equipment"
+            android:icon="@drawable/ic_menu_equipment"
+            android:title="Alat dan Kendaraan Berat" />
     </group>
 
-    <item android:title="Header Menu">
+    <item android:title="Pengaturan">
         <menu>
             <item
                 android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Menu 5" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Menu 6" />
+                android:icon="@drawable/ic_menu_exit"
+                android:title="Keluar" />
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Menu 6" />-->
         </menu>
     </item>
 

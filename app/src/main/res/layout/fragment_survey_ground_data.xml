@@ -268,7 +268,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_ground_rent_duration"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
