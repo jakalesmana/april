@@ -66,8 +66,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_building_size_imb"
-                    android:inputType="none"
-                    android:focusableInTouchMode="false"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
@@ -96,8 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_building_renov_year"
-                    android:inputType="none"
-                    android:focusableInTouchMode="false"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>
@@ -369,8 +367,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:hint="@string/survey_field_building_phone_line_no"
-                    android:inputType="none"
-                    android:focusableInTouchMode="false"
+                    android:inputType="number"
                     android:maxLines="1"
                     android:textSize="13sp"/>
             </android.support.design.widget.TextInputLayout>

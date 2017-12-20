@@ -2,6 +2,7 @@ package com.trusindo.april.ui.activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -19,13 +20,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.trusindo.april.R;
 import com.trusindo.april.manager.LocationSurveyManager;
+import com.trusindo.april.manager.UserLoginStateManager;
 import com.trusindo.april.ui.composite.SurveyPagerAdapter;
 import com.trusindo.april.utils.AppUtils;
 
 import java.util.ArrayList;
+
+import cn.pedant.SweetAlert.SweetAlertDialog;
+
 /**
  * Created by jakalesmana on 10/10/17.
  */
@@ -150,23 +156,36 @@ public class SurveyPageActivity extends BaseActivity {
     }
 
     private void showExitDialog() {
-        AlertDialog.Builder builder;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
-        } else {
-            builder = new AlertDialog.Builder(this);
-        }
-        builder.setTitle("")
-                .setMessage(getString(R.string.exit_confirmation))
-                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
+//        AlertDialog.Builder builder;
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+//            builder = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+//        } else {
+//            builder = new AlertDialog.Builder(this);
+//        }
+//        builder.setTitle("")
+//                .setMessage(getString(R.string.exit_confirmation))
+//                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        finish();
+//                    }
+//                })
+//                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+//                    public void onClick(DialogInterface dialog, int which) {}
+//                })
+//                .setIcon(android.R.drawable.ic_dialog_info)
+//                .show();
+
+
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Keluar Pengisian Data")
+                .setContentText(getString(R.string.exit_confirmation))
+                .setConfirmText("Keluar")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
                         finish();
                     }
                 })
-                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {}
-                })
-                .setIcon(android.R.drawable.ic_dialog_info)
                 .show();
     }
 }

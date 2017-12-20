@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 
 import com.trusindo.april.R;
+import com.trusindo.april.utils.AppUtils;
 
 /**
  * Created by jakalesmana on 10/10/17.
@@ -68,7 +69,37 @@ public class SurveyBuildingDataFragment extends BaseFragment implements View.OnC
     }
 
     @Override
-    public void onClick(View v) {
-
+    public void onClick(View view) {
+        if(view.getId() == R.id.txtJenisBangunan) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_type);
+        } else if(view.getId() == R.id.txtStruktur) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_structure);
+        } else if(view.getId() == R.id.txtLantai) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_floor);
+        } else if(view.getId() == R.id.txtDinding) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_wall);
+        } else if(view.getId() == R.id.txtPlafon) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_plafond);
+        } else if(view.getId() == R.id.txtAtap) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_roof);
+        } else if(view.getId() == R.id.txtPintuJendela) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_windowdoor);
+        } else if(view.getId() == R.id.txtTangga) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_stair);
+        } else if(view.getId() == R.id.txtKelasBangunan) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_building_class);
+        } else if(view.getId() == R.id.txtSambunganListrik) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_availability_ext);
+        } else if(view.getId() == R.id.txtAirBersih) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_availability_ext);
+        } else if(view.getId() == R.id.txtTelepon) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_availability_ext);
+        } else if(view.getId() == R.id.txtTempatParkir) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_availability_ext);
+        } else if(view.getId() == R.id.txtPagar) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_availability);
+        } else if(view.getId() == R.id.txtPemadam) {
+            AppUtils.showMenu(getActivity(), (EditText)view, R.array.arr_availability);
+        }
     }
 }

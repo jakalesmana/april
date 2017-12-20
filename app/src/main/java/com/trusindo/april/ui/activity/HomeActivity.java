@@ -16,15 +16,20 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUser;
+import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
 import com.google.android.gms.maps.model.LatLng;
 import com.trusindo.april.Constants.Constant;
 import com.trusindo.april.R;
 import com.trusindo.april.manager.LocationSurveyManager;
+import com.trusindo.april.manager.UserLoginStateManager;
 import com.trusindo.april.utils.LocationUtils;
 
 import java.util.List;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.nlopez.smartlocation.OnLocationUpdatedListener;
 import io.nlopez.smartlocation.OnReverseGeocodingListener;
 import io.nlopez.smartlocation.SmartLocation;
@@ -57,8 +62,11 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        TextView txtName = navigationView.getHeaderView(0).findViewById(R.id.txtMenuName);
+        txtName.setText(UserLoginStateManager.getInstance().getUser().getName());
     }
 
     @Override
@@ -175,10 +183,33 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
 
         } else if (id == R.id.nav_heavy_equipment) {
 
+        } else if (id == R.id.nav_logout) {
+            confirmLogout();
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void confirmLogout() {
+        new SweetAlertDialog(this, SweetAlertDialog.WARNING_TYPE)
+                .setTitleText("Anda yakin?")
+                .setContentText("Keluar dari aplikasi mengharuskan Anda untuk login kembali.")
+                .setConfirmText("Keluar")
+                .setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
+                    @Override
+                    public void onClick(SweetAlertDialog sDialog) {
+                        CognitoUserPool pool = UserLoginStateManager.getInstance().getUserPool();
+                        pool.getCurrentUser().signOut();
+
+                        UserLoginStateManager.getInstance().logout();
+
+                        Intent i = new Intent(HomeActivity.this, LoginActivity.class);
+                        startActivity(i);
+                        finish();
+                    }
+                })
+                .show();
     }
 }

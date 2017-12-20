@@ -67,8 +67,6 @@ public class HTTPIntConnection {
         String auth = "";
         if (UserLoginStateManager.getInstance().getUser() != null) {
             auth = "Bearer " + UserLoginStateManager.getInstance().getUser().getToken();
-        } else if (UserLoginStateManager.getInstance().getTempToken() != null) {
-            auth = "Bearer " + UserLoginStateManager.getInstance().getTempToken();
         }
         doCall(new OkHttpClient().newBuilder().connectTimeout(CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
                 .readTimeout(READ_TIMEOUT, TimeUnit.MILLISECONDS)

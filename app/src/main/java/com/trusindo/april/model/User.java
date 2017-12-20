@@ -1,5 +1,7 @@
 package com.trusindo.april.model;
 
+import com.google.gson.Gson;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -11,36 +13,28 @@ import java.io.Serializable;
 
 public class User implements Serializable {
 
+    private String userName;
     private String email;
     private String fcmToken;
-    private String gender;
     private String name;
     private String token;
-    private int uid;
 
     public User() {
+        setUserName("");
         setName("");
         setEmail("");
-        setGender("");
-        setUid(-1);
         setToken("");
         setFcmToken("");
     }
 
     public String toJson() {
-        JSONObject jsonObject = new JSONObject();
-        try {
-            jsonObject.put("name", this.name);
-            jsonObject.put("email", this.email);
-            jsonObject.put("gender", this.gender);
-            jsonObject.put("uid", this.uid);
-            jsonObject.put("token", this.token);
-            jsonObject.put("fcmToken", this.fcmToken);
-            return jsonObject.toString();
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return "";
-        }
+        Gson gson = new Gson();
+        return gson.toJson(this);
+    }
+
+    public static User fromJson(String json) {
+        Gson gson = new Gson();
+        return gson.fromJson(json, User.class);
     }
 
     public String getFcmToken() {
@@ -59,28 +53,20 @@ public class User implements Serializable {
         this.name = name;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String getEmail() {
         return this.email;
     }
 
+    public String getUserName() {
+        return this.userName;
+    }
+
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getGender() {
-        return this.gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public int getUid() {
-        return this.uid;
-    }
-
-    public void setUid(int uid) {
-        this.uid = uid;
     }
 
     public String getToken() {
@@ -91,25 +77,4 @@ public class User implements Serializable {
         this.token = token;
     }
 
-    public static User parseUser(String data) {
-        try {
-            User user = new User();
-            JSONObject jsonObj = new JSONObject(data);
-            user.setName(jsonObj.getString("name"));
-            user.setEmail(jsonObj.getString("email"));
-            user.setGender(jsonObj.getString("gender"));
-            user.setUid(jsonObj.getInt("uid"));
-            if (jsonObj.has("token")) {
-                user.setToken(jsonObj.getString("token"));
-            }
-            if (!jsonObj.has("fcmToken")) {
-                return user;
-            }
-            user.setFcmToken(jsonObj.getString("fcmToken"));
-            return user;
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
-    }
 }
