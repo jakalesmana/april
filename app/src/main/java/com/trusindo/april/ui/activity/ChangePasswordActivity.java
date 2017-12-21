@@ -47,8 +47,8 @@ public class ChangePasswordActivity extends BaseActivity {
             return;
         }
 
-        if (txtNewPassword.getText().toString().isEmpty()) {
-            txtNewPassword.setError(getString(R.string.error_empty_data));
+        if (txtNewPassword.getText().toString().length() < 8) {
+            txtNewPassword.setError(getString(R.string.error_invalid_password));
             txtNewPassword.requestFocus();
             return;
         }
