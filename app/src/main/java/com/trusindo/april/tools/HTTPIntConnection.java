@@ -2,7 +2,7 @@ package com.trusindo.april.tools;
 
 import android.os.Handler;
 import android.os.Looper;
-import android.support.v7.widget.helper.ItemTouchHelper;
+import android.support.annotation.NonNull;
 import android.util.Log;
 
 import com.trusindo.april.error.APIError;
@@ -24,6 +24,11 @@ import okhttp3.Request;
 import okhttp3.Request.Builder;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+
+import static java.net.HttpURLConnection.HTTP_ACCEPTED;
+import static java.net.HttpURLConnection.HTTP_CREATED;
+import static java.net.HttpURLConnection.HTTP_NO_CONTENT;
+import static java.net.HttpURLConnection.HTTP_OK;
 
 /**
  * Created by jakalesmana on 9/12/17.
@@ -69,8 +74,23 @@ public class HTTPIntConnection {
             auth = "Bearer " + UserLoginStateManager.getInstance().getUser().getToken();
         }
         doCall(new OkHttpClient().newBuilder().connectTimeout(CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
-                .readTimeout(READ_TIMEOUT, TimeUnit.MILLISECONDS)
-                .writeTimeout(WRITE_TIMEOUT, TimeUnit.MILLISECONDS).build(),
+                        .readTimeout(READ_TIMEOUT, TimeUnit.MILLISECONDS)
+                        .writeTimeout(WRITE_TIMEOUT, TimeUnit.MILLISECONDS).build(),
+                new Builder().url(url).post(body).addHeader("Authorization", auth)
+                        .addHeader("Accept", "application/json")
+                        .addHeader("Content-Type", "application/json").build(), listener);
+    }
+
+    public void post(String url, String jsonData, HTTPIntListener listener) {
+        RequestBody body = RequestBody.create(MediaType.parse("application/json; charset=utf-8"), jsonData);
+        Log.d("json content", "json content: " + jsonData);
+        String auth = "";
+        if (UserLoginStateManager.getInstance().getUser() != null) {
+            auth = "Bearer " + UserLoginStateManager.getInstance().getUser().getToken();
+        }
+        doCall(new OkHttpClient().newBuilder().connectTimeout(CONNECT_TIMEOUT, TimeUnit.MILLISECONDS)
+                        .readTimeout(READ_TIMEOUT, TimeUnit.MILLISECONDS)
+                        .writeTimeout(WRITE_TIMEOUT, TimeUnit.MILLISECONDS).build(),
                 new Builder().url(url).post(body).addHeader("Authorization", auth)
                         .addHeader("Accept", "application/json")
                         .addHeader("Content-Type", "application/json").build(), listener);
@@ -95,7 +115,7 @@ public class HTTPIntConnection {
         }
         client.newCall(request).enqueue(new Callback() {
 
-            public void onFailure(Call call, IOException e) {
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 if (listener != null) {
                     HTTPIntConnection.mainHandler.post(new Runnable() {
                         public void run() {
@@ -105,7 +125,7 @@ public class HTTPIntConnection {
                 }
             }
 
-            public void onResponse(Call call, Response response) throws IOException {
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 BufferedReader in = new BufferedReader(new InputStreamReader(response.body().byteStream()));
                 StringBuilder bodyBuilder = new StringBuilder();
                 while (true) {
@@ -121,7 +141,7 @@ public class HTTPIntConnection {
                 if (listener != null) {
                     HTTPIntConnection.mainHandler.post(new Runnable() {
                         public void run() {
-                            if (code == ItemTouchHelper.Callback.DEFAULT_DRAG_ANIMATION_DURATION || code == 204 || code == 201) {
+                            if (code == HTTP_OK || code == HTTP_NO_CONTENT || code == HTTP_CREATED || code == HTTP_ACCEPTED) {
                                 listener.onSuccess(body);
                             } else if (code == 401) {
                                 listener.onError(APIError.SESSION_EXPIRED);
