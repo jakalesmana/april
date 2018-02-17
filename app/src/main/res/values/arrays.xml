@@ -337,4 +337,11 @@
         <item>Yang dikuasakan</item>
         <item>Lainnya</item>
     </string-array>
+
+    <string-array name="arr_prop_status">
+        <item>Penawaran</item>
+        <item>Transaksi</item>
+        <item>Sewa</item>
+        <item>Lainnya</item>
+    </string-array>
 </resources>

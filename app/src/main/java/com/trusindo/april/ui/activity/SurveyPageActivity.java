@@ -76,11 +76,11 @@ public class SurveyPageActivity extends BaseActivity {
 
     private void setupMaterialTabBar() {
         final int[] tab_icons = {
-                R.mipmap.ic_assignment,
                 R.mipmap.ic_terrain,
                 R.mipmap.ic_building,
                 R.mipmap.ic_location_env,
                 R.mipmap.ic_photo,
+                R.mipmap.ic_assignment,
                 R.mipmap.ic_location_on,
                 R.mipmap.ic_sign};
 

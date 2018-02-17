@@ -7,37 +7,40 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/pic_comparator"
-        android:textStyle="bold"
-        android:textSize="17sp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="0dp"/>
+        android:text="@string/pic_comparator"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/click_to_describe"
-        android:textSize="13sp"
+        android:layout_marginBottom="5dp"
         android:layout_marginLeft="10dp"
-        android:layout_marginBottom="5dp"/>
+        android:layout_marginStart="10dp"
+        android:text="@string/click_to_describe"
+        android:textSize="13sp" />
 
     <ListView
         android:id="@+id/lvEnvPic"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="20dp"
+        android:layout_weight="1"
         android:divider="@color/transparent"
         android:dividerHeight="20dp"
-        android:layout_weight="1"
-        android:scrollbars="none"/>
+        android:padding="20dp"
+        android:scrollbars="none" />
 
     <Button
         android:id="@+id/btnAddPhoto"
-        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_button_rounded_primary_clickable"
         android:text="@string/action_add_pic"
-        android:background="@drawable/bg_button_rounded_primary_clickable"/>
+        android:textColor="@color/white" />
 
 </LinearLayout>

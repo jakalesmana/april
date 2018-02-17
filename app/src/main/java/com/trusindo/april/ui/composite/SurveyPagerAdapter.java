@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 
 import com.trusindo.april.R;
 import com.trusindo.april.ui.fragment.SurveyBuildingDataFragment;
+import com.trusindo.april.ui.fragment.SurveyComparationDataFragment;
 import com.trusindo.april.ui.fragment.SurveyEnvironmentDataFragment;
 import com.trusindo.april.ui.fragment.SurveyGroundDataFragment;
 import com.trusindo.april.ui.fragment.SurveyLocFragment;
@@ -32,15 +33,15 @@ public class SurveyPagerAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new SurveyObjectDataFragment();
-            case 1:
                 return new SurveyGroundDataFragment();
-            case 2:
+            case 1:
                 return new SurveyEnvironmentDataFragment();
-            case 3:
+            case 2:
                 return new SurveyBuildingDataFragment();
-            case 4:
+            case 3:
                 return new SurveyPicObjectFragment();
+            case 4:
+                return new SurveyComparationDataFragment();
             case 5:
                 return new SurveyLocFragment();
             case 6:

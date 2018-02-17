@@ -126,6 +126,8 @@
 
     <string name="survey_environment_data">Data Lingkungan</string>
 
+    <string name="survey_comparation_data">Informasi Harga &#038; Data Pembanding</string>
+
     <string name="survey_section_environment">Informasi Umum</string>
     <string name="survey_field_area">Wilayah:</string>
     <string name="survey_field_for">Peruntukan:</string>
@@ -133,10 +135,34 @@
     <string name="survey_field_decoration">Penataan Ruangan Lingkungan:</string>
 
     <string name="survey_section_environment_facility">Fasilitas Lingkungan</string>
+    <string name="survey_section_comparation1">Data 1</string>
+    <string name="survey_section_comparation2">Data 2</string>
+    <string name="survey_section_comparation3">Data 3</string>
     <string name="survey_field_electricity">Jaringan Listrik:</string>
     <string name="survey_field_phone">Jaringan Telepon:</string>
     <string name="survey_field_water">Jaringan Air Bersih:</string>
     <string name="survey_field_lighting">Penerangan Jalan:</string>
+
+    <string name="survey_comparation_address">Alamat/lokasi:</string>
+    <string name="survey_comparation_subdistrict">Kelurahan/desa:</string>
+    <string name="survey_comparation_district">Kecamatan:</string>
+    <string name="survey_comparation_city">Kodya/Kab:</string>
+    <string name="survey_comparation_contact_person">Kontak Person:</string>
+    <string name="survey_comparation_phone_no">No. Telepon:</string>
+    <string name="survey_comparation_status">Status Data:</string>
+    <string name="survey_comparation_price">Harga (Rp. ,00):</string>
+    <string name="survey_comparation_property_type">Jenis Properti:</string>
+    <string name="survey_comparation_land_area">Luas Tanah (m2):</string>
+    <string name="survey_comparation_for">Peruntukan:</string>
+    <string name="survey_comparation_license">Bukti Kepemilikan:</string>
+    <string name="survey_comparation_street_size">Lebar Jalan (m):</string>
+    <string name="survey_comparation_land_position">Posisi Tanah:</string>
+    <string name="survey_comparation_contur">Kontur Tanah:</string>
+    <string name="survey_comparation_land_shape">Bentuk Tanah:</string>
+    <string name="survey_comparation_building_condition">Kondisi Bangunan:</string>
+    <string name="survey_comparation_building_area">Luas Bangunan (m2):</string>
+    <string name="survey_comparation_building_class">Kelas Bangunan:</string>
+    <string name="survey_comparation_building_floor">Jumlah Lantai:</string>
 
     <string name="survey_section_environment_analysis">Analisa Lokasi</string>
     <string name="survey_field_access_level">Kemudahan Akses &#038; Transportasi:</string>
