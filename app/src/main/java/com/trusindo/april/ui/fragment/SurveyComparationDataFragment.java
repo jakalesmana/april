@@ -114,8 +114,6 @@ public class SurveyComparationDataFragment extends BaseFragment implements View.
         txtKondisiBangunan3.setOnClickListener(this);
         txtKelasBangunan3.setOnClickListener(this);
 
-
-
         return v;
     }
 
