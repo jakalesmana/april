@@ -5,22 +5,18 @@ import android.location.Address;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUser;
 import com.amazonaws.mobileconnectors.cognitoidentityprovider.CognitoUserPool;
-import com.google.android.gms.maps.model.LatLng;
 import com.trusindo.april.Constants.Constant;
 import com.trusindo.april.R;
 import com.trusindo.april.manager.LocationSurveyManager;
@@ -86,21 +82,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
                 .start(new OnLocationUpdatedListener() {
                     public void onLocationUpdated(Location location) {
                         if (location != null) {
-
-                            Log.d("location", "Location updated from smartloc:" + location.getLatitude() + ", " + location.getLongitude());
-
-//                            StringBuilder builder = new StringBuilder();
-
-//                            TextView txtTest = (TextView) findViewById(R.id.txtTest);
-//                            builder.append("location lat:::: " + location.getLatitude() + "\n");
-//                            builder.append("location long:::: " + location.getLongitude() + "\n");
-//                            builder.append("location accuracy:::: " + location.getAccuracy() + "\n");
-//                            builder.append("location bearing:::: " + location.getBearing() + "\n");
-//                            builder.append("location time:::: " + location.getTime() + "\n");
-//                            builder.append("location altitude:::: " + location.getAltitude() + "\n");
-//                            builder.append("location provider:::: " + location.getProvider() + "\n\n\n");
-//                            txtTest.setText(builder.toString());
-
                             if (location.getAccuracy() <= accuracyIndex) {
                                 LocationSurveyManager.getInstance().setDeviceLocation(location);
                                 getAllAddress(location);
@@ -146,28 +127,6 @@ public class HomeActivity extends BaseActivity implements NavigationView.OnNavig
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.home, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

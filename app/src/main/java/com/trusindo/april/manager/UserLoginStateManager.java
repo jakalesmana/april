@@ -49,7 +49,7 @@ public class UserLoginStateManager {
 
         userPool = new CognitoUserPool(context,
                 Constant.COGNITO_POOL_ID,
-                Constant.COGNITO_CLIENT_ID,null, identityProviderClient);
+                Constant.COGNITO_CLIENT_ID, Constant.COGNITO_CLIENT_SECRET, identityProviderClient);
     }
 
     public void update(User user) {
@@ -59,18 +59,18 @@ public class UserLoginStateManager {
         editor.apply();
     }
 
-    public void setFCMToken(String token) {
-        SharedPreferences.Editor editor = this.mPreferences.edit();
-        editor.putString(USER_FCM_TOKEN, token);
-        editor.apply();
-    }
-
     public CognitoUserPool getUserPool() {
         return userPool;
     }
 
     public String getFCMToken() {
         return this.mPreferences.getString(USER_FCM_TOKEN, "");
+    }
+
+    public void setFCMToken(String token) {
+        SharedPreferences.Editor editor = this.mPreferences.edit();
+        editor.putString(USER_FCM_TOKEN, token);
+        editor.apply();
     }
 
     private String getUserPref() {

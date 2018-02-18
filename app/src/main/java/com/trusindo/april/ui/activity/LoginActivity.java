@@ -239,10 +239,15 @@ public class LoginActivity extends BaseActivity  {
                 String name = data.getStringExtra("name");
                 String newPassword = data.getStringExtra("password");
 
+                String requiredAttr = challengeContinuation.getParameters().get(CognitoServiceConstants.CHLG_PARAM_REQUIRED_ATTRIBUTE);
+                requiredAttr = requiredAttr.replace("[\"", "");
+                requiredAttr = requiredAttr.replace("\"]", "");
                 challengeContinuation.setChallengeResponse(CognitoServiceConstants.CHLG_RESP_NEW_PASSWORD, newPassword);
-                challengeContinuation.setChallengeResponse(CognitoServiceConstants.CHLG_PARAM_USER_ATTRIBUTE_PREFIX + "given_name", name);
+                challengeContinuation.setChallengeResponse(requiredAttr, name);
                 challengeContinuation.continueTask();
                 challengeContinuation = null;
+            } else {
+                dismissLoading();
             }
         } else {
             dismissLoading();
