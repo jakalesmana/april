@@ -1,0 +1,13 @@
+.DS_Store
+.gradle
+/local.properties
+/.idea/*
+/captures
+build/
+
+# exceptions
+!.gitignore
+!.idea/codeStyleSettings.xml
+*.iml
+*.apk
+app/.idea/
